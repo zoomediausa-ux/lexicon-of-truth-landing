@@ -1,0 +1,13 @@
+{
+  "name": "veritas-landing-page",
+  "version": "1.0.0",
+  "description": "Veritas Press inspired landing page - Classical Christian Education",
+  "scripts": {
+    "dev": "npx serve .",
+    "build": "echo 'Static site - no build needed'",
+    "start": "npx serve . -l $PORT"
+  },
+  "keywords": ["education", "homeschool", "classical", "christian"],
+  "author": "Zoo Media AI",
+  "license": "ISC"
+}
