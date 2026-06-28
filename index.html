@@ -170,9 +170,23 @@
         .hero-content {
             position: relative;
             z-index: 3;
-            text-align: center;
-            max-width: 900px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            max-width: 1200px;
+            width: 100%;
             padding: 140px 40px 100px;
+        }
+
+        .hero-left {
+            text-align: left;
+        }
+
+        .hero-right {
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .hero-badge {
@@ -186,49 +200,58 @@
             margin-bottom: 30px;
         }
 
-        .hero h1 {
-            font-size: 52px;
+        .hero-left h1 {
+            font-size: 48px;
             line-height: 1.15;
             margin-bottom: 25px;
             font-weight: 600;
             color: var(--white);
+            text-align: left;
         }
 
-        .hero h1 em {
+        .hero-left h1 em {
             font-style: italic;
             color: var(--gold-bright);
         }
 
-        .hero-subtitle {
+        .hero-left .hero-subtitle {
             font-size: 20px;
             color: var(--text-light);
             font-weight: 300;
             margin-bottom: 20px;
+            text-align: left;
         }
 
-        .hero p {
+        .hero-left p {
             font-size: 17px;
             line-height: 1.8;
             margin-bottom: 40px;
             color: var(--gray-warm);
             font-weight: 300;
-            max-width: 650px;
-            margin-left: auto;
-            margin-right: auto;
+            max-width: 540px;
+            text-align: left;
         }
 
-        .hero-line {
+        .hero-left .hero-line {
             width: 60px;
             height: 1px;
             background: var(--gold);
-            margin: 0 auto 40px;
+            margin: 0 0 40px 0;
         }
 
-        .hero-buttons {
+        .hero-left .hero-buttons {
             display: flex;
             gap: 20px;
-            justify-content: center;
+            justify-content: flex-start;
             flex-wrap: wrap;
+        }
+
+        .hero-right-image {
+            width: 100%;
+            max-width: 450px;
+            height: auto;
+            border-radius: 4px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.5);
         }
 
         .btn-gold {
@@ -822,16 +845,47 @@
                 display: block;
             }
 
-            .hero h1 {
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .hero-left h1 {
                 font-size: 32px;
             }
 
-            .hero-subtitle {
+            .hero-left .hero-subtitle {
                 font-size: 16px;
             }
 
-            .hero p {
+            .hero-left p {
                 font-size: 15px;
+            }
+
+            .hero-left {
+                text-align: center;
+            }
+
+            .hero-left h1,
+            .hero-left .hero-subtitle,
+            .hero-left p {
+                text-align: center;
+            }
+
+            .hero-left .hero-line {
+                margin: 0 auto 40px;
+            }
+
+            .hero-left .hero-buttons {
+                justify-content: center;
+            }
+
+            .hero-right {
+                order: -1;
+            }
+
+            .hero-right-image {
+                max-width: 300px;
             }
 
             .section {
@@ -904,14 +958,19 @@
         <div class="hero-overlay"></div>
         <div class="hero-glow"></div>
         <div class="hero-content">
-            <div class="hero-badge">A 10-Week Course for Adults & Young Adults</div>
-            <h1>Restore the Language.<br>Reclaim the <em>Truth</em>.</h1>
-            <p class="hero-subtitle">The Lexicon Of Truth</p>
-            <div class="hero-line"></div>
-            <p>A rigorous journey through the unbroken thread of Catholic teaching—from the death of Christ to the present day. Examine how language has been mutated, hierarchies corrupted, and heresies weaponized against the Faith.</p>
-            <div class="hero-buttons">
-                <a href="#about" class="btn-gold">Explore the Course</a>
-                <a href="#contact" class="btn-outline">Register Interest</a>
+            <div class="hero-left">
+                <div class="hero-badge">A 10-Week Course for Adults & Young Adults</div>
+                <h1>Restore the Language.<br>Reclaim the <em>Truth</em>.</h1>
+                <p class="hero-subtitle">The Lexicon Of Truth</p>
+                <div class="hero-line"></div>
+                <p>A rigorous journey through the unbroken thread of Catholic teaching—from the death of Christ to the present day. Examine how language has been mutated, hierarchies corrupted, and heresies weaponized against the Faith.</p>
+                <div class="hero-buttons">
+                    <a href="#about" class="btn-gold">Explore the Course</a>
+                    <a href="#contact" class="btn-outline">Register Interest</a>
+                </div>
+            </div>
+            <div class="hero-right">
+                <img src="hero-image.png" alt="Lexicon Of Truth" class="hero-right-image">
             </div>
         </div>
     </section>
