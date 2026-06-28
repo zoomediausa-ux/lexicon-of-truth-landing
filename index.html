@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lexicon Of Truth | Illuminating Minds, Transforming Hearts</title>
+    <title>Lexicon Of Truth | A 10-Week Journey Into the Unbroken Thread of Catholic Teaching</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
@@ -142,7 +142,7 @@
             position: absolute;
             inset: 0;
             background: url('hero-image.png') center/cover no-repeat;
-            opacity: 0.7;
+            opacity: 0.6;
         }
 
         .hero-overlay {
@@ -150,19 +150,19 @@
             inset: 0;
             background: linear-gradient(
                 135deg,
-                rgba(10,14,26,0.85) 0%,
-                rgba(10,14,26,0.4) 50%,
-                rgba(10,14,26,0.7) 100%
+                rgba(10,14,26,0.9) 0%,
+                rgba(10,14,26,0.5) 50%,
+                rgba(10,14,26,0.8) 100%
             );
         }
 
         .hero-glow {
             position: absolute;
-            top: 15%;
-            left: 20%;
-            width: 300px;
-            height: 300px;
-            background: radial-gradient(circle, rgba(201,168,76,0.15) 0%, transparent 70%);
+            top: 20%;
+            left: 25%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(201,168,76,0.12) 0%, transparent 70%);
             border-radius: 50%;
             pointer-events: none;
         }
@@ -172,22 +172,24 @@
             z-index: 3;
             text-align: center;
             max-width: 900px;
-            padding: 120px 40px 80px;
+            padding: 140px 40px 100px;
         }
 
-        .hero-subtitle {
-            font-family: 'Cinzel', serif;
-            font-size: 14px;
-            color: var(--gold);
-            letter-spacing: 0.2em;
+        .hero-badge {
+            display: inline-block;
+            border: 1px solid rgba(201,168,76,0.4);
+            padding: 8px 24px;
+            font-size: 12px;
+            letter-spacing: 0.15em;
             text-transform: uppercase;
+            color: var(--gold);
             margin-bottom: 30px;
         }
 
         .hero h1 {
-            font-size: 56px;
+            font-size: 52px;
             line-height: 1.15;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
             font-weight: 600;
             color: var(--white);
         }
@@ -197,13 +199,20 @@
             color: var(--gold-bright);
         }
 
-        .hero p {
-            font-size: 18px;
-            line-height: 1.8;
-            margin-bottom: 50px;
+        .hero-subtitle {
+            font-size: 20px;
             color: var(--text-light);
             font-weight: 300;
-            max-width: 600px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 17px;
+            line-height: 1.8;
+            margin-bottom: 40px;
+            color: var(--gray-warm);
+            font-weight: 300;
+            max-width: 650px;
             margin-left: auto;
             margin-right: auto;
         }
@@ -303,7 +312,7 @@
         .section-header p {
             font-size: 17px;
             color: var(--text-light);
-            max-width: 600px;
+            max-width: 650px;
             margin: 0 auto;
             font-weight: 300;
             line-height: 1.8;
@@ -316,80 +325,150 @@
             margin: 30px auto 0;
         }
 
-        /* Paths Section */
-        .paths-grid {
+        /* Course Overview */
+        .overview-grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .overview-card {
+            text-align: center;
+            padding: 40px 30px;
+            border: 1px solid rgba(201,168,76,0.1);
+            background: rgba(17,24,39,0.4);
+        }
+
+        .overview-number {
+            font-family: 'Cinzel', serif;
+            font-size: 48px;
+            color: var(--gold);
+            line-height: 1;
+            margin-bottom: 15px;
+        }
+
+        .overview-card h3 {
+            font-size: 16px;
+            color: var(--white);
+            margin-bottom: 10px;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        .overview-card p {
+            color: var(--gray-warm);
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        /* Objectives Section */
+        .objectives-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .objective-item {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 40px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid rgba(201,168,76,0.1);
+        }
+
+        .objective-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .objective-number {
+            font-family: 'Cinzel', serif;
+            font-size: 36px;
+            color: var(--gold);
+            opacity: 0.5;
+            line-height: 1;
+            min-width: 60px;
+        }
+
+        .objective-content h3 {
+            font-size: 20px;
+            color: var(--white);
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+
+        .objective-content p {
+            color: var(--gray-warm);
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+        /* Modules Section */
+        .modules-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
             gap: 30px;
         }
 
-        .path-card {
-            background: rgba(17,24,39,0.6);
+        .module-card {
+            background: rgba(17,24,39,0.5);
             border: 1px solid rgba(201,168,76,0.1);
-            padding: 50px 30px;
-            text-align: center;
-            transition: all 0.4s;
+            padding: 50px 40px;
             position: relative;
             overflow: hidden;
+            transition: all 0.4s;
         }
 
-        .path-card::before {
+        .module-card::before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
-            right: 0;
-            height: 2px;
-            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+            width: 3px;
+            height: 100%;
+            background: var(--gold);
             opacity: 0;
             transition: opacity 0.4s;
         }
 
-        .path-card:hover {
-            border-color: rgba(201,168,76,0.3);
-            transform: translateY(-5px);
+        .module-card:hover {
+            border-color: rgba(201,168,76,0.2);
+            transform: translateX(5px);
         }
 
-        .path-card:hover::before {
+        .module-card:hover::before {
             opacity: 1;
         }
 
-        .path-number {
+        .module-number {
             font-family: 'Cinzel', serif;
-            font-size: 48px;
-            color: rgba(201,168,76,0.2);
-            line-height: 1;
-            margin-bottom: 20px;
+            font-size: 14px;
+            color: var(--gold);
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            margin-bottom: 15px;
         }
 
-        .path-card h3 {
-            font-size: 20px;
+        .module-card h3 {
+            font-size: 22px;
             color: var(--white);
             margin-bottom: 15px;
             font-weight: 500;
         }
 
-        .path-card p {
+        .module-card p {
             color: var(--gray-warm);
             font-size: 14px;
             line-height: 1.7;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
         }
 
-        .path-link {
-            color: var(--gold);
-            text-decoration: none;
+        .module-weeks {
             font-size: 12px;
-            letter-spacing: 0.1em;
+            color: var(--gold-dim);
+            letter-spacing: 0.05em;
             text-transform: uppercase;
-            transition: color 0.3s;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .path-link:hover {
-            color: var(--gold-bright);
         }
 
         /* Quote Section */
@@ -421,19 +500,19 @@
             text-transform: uppercase;
         }
 
-        /* Why Section */
-        .why-grid {
+        /* Format Section */
+        .format-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 40px;
         }
 
-        .why-card {
+        .format-card {
             text-align: center;
             padding: 40px 20px;
         }
 
-        .why-icon {
+        .format-icon {
             width: 60px;
             height: 60px;
             border: 1px solid rgba(201,168,76,0.3);
@@ -445,13 +524,13 @@
             color: var(--gold);
         }
 
-        .why-card h3 {
+        .format-card h3 {
             font-size: 18px;
             color: var(--white);
             margin-bottom: 15px;
         }
 
-        .why-card p {
+        .format-card p {
             color: var(--gray-warm);
             font-size: 14px;
             line-height: 1.7;
@@ -487,7 +566,7 @@
         .cta-section p {
             font-size: 16px;
             color: var(--text-light);
-            max-width: 500px;
+            max-width: 550px;
             margin: 0 auto 40px;
             font-weight: 300;
             line-height: 1.8;
@@ -720,12 +799,13 @@
         }
 
         @media (max-width: 1024px) {
-            .paths-grid {
+            .overview-grid,
+            .format-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
 
-            .why-grid {
-                grid-template-columns: repeat(2, 1fr);
+            .modules-grid {
+                grid-template-columns: 1fr;
             }
         }
 
@@ -746,8 +826,12 @@
                 font-size: 32px;
             }
 
-            .hero p {
+            .hero-subtitle {
                 font-size: 16px;
+            }
+
+            .hero p {
+                font-size: 15px;
             }
 
             .section {
@@ -758,9 +842,14 @@
                 font-size: 28px;
             }
 
-            .paths-grid,
-            .why-grid {
+            .overview-grid,
+            .format-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .objective-item {
+                flex-direction: column;
+                gap: 15px;
             }
 
             .contact-container {
@@ -800,11 +889,12 @@
     <nav class="navbar" id="navbar">
         <a href="#" class="logo">Lexicon<span>Of Truth</span></a>
         <ul class="nav-links">
-            <li><a href="#paths">Programs</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#about">The Course</a></li>
+            <li><a href="#modules">Modules</a></li>
+            <li><a href="#format">Format</a></li>
+            <li><a href="#contact">Register</a></li>
         </ul>
-        <a href="#contact" class="nav-cta">Inquire Now</a>
+        <a href="#contact" class="nav-cta">Register Now</a>
         <button class="mobile-menu-btn">☰</button>
     </nav>
 
@@ -814,50 +904,141 @@
         <div class="hero-overlay"></div>
         <div class="hero-glow"></div>
         <div class="hero-content">
-            <p class="hero-subtitle">Classical Christian Education</p>
-            <h1>Illuminating Minds,<br><em>Transforming Hearts</em></h1>
+            <div class="hero-badge">A 10-Week Course for Adults & Young Adults</div>
+            <h1>Restore the Language.<br>Reclaim the <em>Truth</em>.</h1>
+            <p class="hero-subtitle">The Lexicon Of Truth</p>
             <div class="hero-line"></div>
-            <p>From kindergarten through graduation, we provide a classical Christian education built to fit your family's life—grounding students in truth, beauty, and goodness.</p>
+            <p>A rigorous journey through the unbroken thread of Catholic teaching—from the death of Christ to the present day. Examine how language has been mutated, hierarchies corrupted, and heresies weaponized against the Faith.</p>
             <div class="hero-buttons">
-                <a href="#paths" class="btn-gold">Explore Programs</a>
-                <a href="#contact" class="btn-outline">Schedule Consultation</a>
+                <a href="#about" class="btn-gold">Explore the Course</a>
+                <a href="#contact" class="btn-outline">Register Interest</a>
             </div>
         </div>
     </section>
 
-    <!-- Paths Section -->
-    <section class="section section-darker" id="paths">
+    <!-- Course Overview -->
+    <section class="section section-darker" id="about">
         <div class="container">
             <div class="section-header">
-                <p class="section-label">Our Approach</p>
-                <h2>Four Paths, One Foundation</h2>
-                <p>Every family is unique. We offer distinct approaches to classical Christian education, each built on the same unwavering foundation of truth.</p>
+                <p class="section-label">The Course</p>
+                <h2>What You Will Discover</h2>
+                <p>Over ten weeks, you will trace the methodical inversion of Catholic language, governance, and doctrine—and learn to defend the unbroken thread of Truth.</p>
                 <div class="section-line"></div>
             </div>
-            <div class="paths-grid">
-                <div class="path-card">
-                    <div class="path-number">I</div>
-                    <h3>You-Teach</h3>
-                    <p>Award-winning curriculum with open-and-go lesson plans that make teaching at home feel manageable, even on the hardest days.</p>
-                    <a href="#" class="path-link">Learn More →</a>
+            <div class="overview-grid">
+                <div class="overview-card">
+                    <div class="overview-number">10</div>
+                    <h3>Weeks</h3>
+                    <p>Approximately 1 hour of reading and video content per week, followed by 1 hour of open Socratic discussion.</p>
                 </div>
-                <div class="path-card">
-                    <div class="path-number">II</div>
-                    <h3>Self-Paced</h3>
-                    <p>Flexible online courses your student works through independently, on a schedule that honors your family's rhythm.</p>
-                    <a href="#" class="path-link">Learn More →</a>
+                <div class="overview-card">
+                    <div class="overview-number">5</div>
+                    <h3>Modules</h3>
+                    <p>Five integrated modules that build from the Source of Truth through the Great Rupture to the Synthesis of Error.</p>
                 </div>
-                <div class="path-card">
-                    <div class="path-number">III</div>
-                    <h3>Live Online</h3>
-                    <p>Live classes with experienced teachers and a community of peers, for families who desire structure and accountability.</p>
-                    <a href="#" class="path-link">Learn More →</a>
+                <div class="overview-card">
+                    <div class="overview-number">∞</div>
+                    <h3>Impact</h3>
+                    <p>Equip yourself with the linguistic shield, historical armor, and theological clarity to defend the Faith in a modernist world.</p>
                 </div>
-                <div class="path-card">
-                    <div class="path-number">IV</div>
-                    <h3>Scholars Academy</h3>
-                    <p>A fully online, accredited classical Christian school with a clear path from elementary through graduation.</p>
-                    <a href="#" class="path-link">Learn More →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Objectives Section -->
+    <section class="section section-dark">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-label">The Five Objectives</p>
+                <h2>The Battle for the Lexicon</h2>
+                <p>Each objective addresses a front in the war to mutate Catholic understanding—from language to hierarchy to doctrine itself.</p>
+                <div class="section-line"></div>
+            </div>
+            <div class="objectives-list">
+                <div class="objective-item">
+                    <div class="objective-number">I</div>
+                    <div class="objective-content">
+                        <h3>The War of Words</h3>
+                        <p>Establish what the words used in Catholicism actually mean versus what they have been mutated to mean in modernist, secular society. Examine how terms like <em>freedom</em>, <em>charity</em>, <em>dialogue</em>, and <em>development of doctrine</em> have been weaponized against the Faith.</p>
+                    </div>
+                </div>
+                <div class="objective-item">
+                    <div class="objective-number">II</div>
+                    <div class="objective-content">
+                        <h3>The Sacred Hierarchy</h3>
+                        <p>Identify the true function, authority, and responsibilities of the clergy—from deacon to pope. Understand apostolic succession, the curia, and the machinery of universal governance as established by Christ.</p>
+                    </div>
+                </div>
+                <div class="objective-item">
+                    <div class="objective-number">III</div>
+                    <div class="objective-content">
+                        <h3>The Shield of Faith</h3>
+                        <p>Understand the heresies refuted by the Church from the death of Christ to today. Study the Fathers, Doctors, and Councils who identified and defeated Arianism, Gnosticism, Pelagianism, Modernism, and more.</p>
+                    </div>
+                </div>
+                <div class="objective-item">
+                    <div class="objective-number">IV</div>
+                    <div class="objective-content">
+                        <h3>The Great Rupture</h3>
+                        <p>Identify the errors that motivated the Protestant "Reformation." Examine why they contradict 1,500+ years of Teaching and Tradition, and which areas of Scripture they violate.</p>
+                    </div>
+                </div>
+                <div class="objective-item">
+                    <div class="objective-number">V</div>
+                    <div class="objective-content">
+                        <h3>The Synthesis of Error</h3>
+                        <p>Knit together the full picture: how Evil has methodically worked for over a thousand years to mutate language, corrupt administrators, and introduce Protestant ideas into the Catholic Church—none of it endorsed by Christ.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modules Section -->
+    <section class="section section-darker" id="modules">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-label">The Curriculum</p>
+                <h2>Five Modules. One Unbroken Thread.</h2>
+                <p>Each module combines primary reading, video lectures, and guided Socratic discussion to build your armor of understanding.</p>
+                <div class="section-line"></div>
+            </div>
+            <div class="modules-grid">
+                <div class="module-card">
+                    <div class="module-number">Module I</div>
+                    <h3>The Source of the Lexicon</h3>
+                    <p>Establish the foundation: God as Pure Actuality (Actus Purus), the Trinity as Divine Super-Logic, and the Analogy of Being that prevents us from making God in our image. The Five Ways of Aquinas as the metaphysical foundation.</p>
+                    <div class="module-weeks">Week 1</div>
+                </div>
+                <div class="module-card">
+                    <div class="module-number">Module II</div>
+                    <h3>The War of Words</h3>
+                    <p>Audit the mutated vocabulary of modernism. Examine how <em>freedom</em> became license, <em>charity</em> became sentimentality, and <em>dialogue</em> became a tool for relativism. Reclaim the linguistic shield.</p>
+                    <div class="module-weeks">Week 2</div>
+                </div>
+                <div class="module-card">
+                    <div class="module-number">Module III</div>
+                    <h3>The Sacred Hierarchy</h3>
+                    <p>The Skeleton of the Body—Apostolicity vs. The Levelers. From St. Ignatius of Antioch to the present: the true function of deacon, priest, bishop, and pope. The Rock and the Machinery of universal governance.</p>
+                    <div class="module-weeks">Weeks 3–4</div>
+                </div>
+                <div class="module-card">
+                    <div class="module-number">Module IV</div>
+                    <h3>The Shield of Faith</h3>
+                    <p>The Christological Battles and the Doctors of Defense. From Nicaea to Trent, understand how the Church identified and refuted heresies through her Fathers, Doctors, and Councils.</p>
+                    <div class="module-weeks">Weeks 5–6</div>
+                </div>
+                <div class="module-card">
+                    <div class="module-number">Module V</div>
+                    <h3>The Great Rupture</h3>
+                    <p>The Architect of Anxiety and the Radical Reformers. Examine the errors that motivated the Protestant schism, why they contradict Scripture and Tradition, and how state control weaponized theological rebellion.</p>
+                    <div class="module-weeks">Weeks 7–8</div>
+                </div>
+                <div class="module-card">
+                    <div class="module-number">Module VI</div>
+                    <h3>The Synthesis of Error</h3>
+                    <p>The Great Mutation and the Administrative Wound. Knit together the methodical inversion: how language, hierarchy, and doctrine were systematically corrupted—and why these changes are neither endorsed nor supported by Christ.</p>
+                    <div class="module-weeks">Weeks 9–11</div>
                 </div>
             </div>
         </div>
@@ -873,30 +1054,30 @@
         </div>
     </section>
 
-    <!-- Why Section -->
-    <section class="section section-dark" id="about">
+    <!-- Format Section -->
+    <section class="section section-dark" id="format">
         <div class="container">
             <div class="section-header">
-                <p class="section-label">Our Distinction</p>
-                <h2>Why Lexicon Of Truth</h2>
-                <p>We believe education is formation—not merely information. Our approach shapes the whole person for a life of wisdom and virtue.</p>
+                <p class="section-label">The Experience</p>
+                <h2>How the Course Works</h2>
+                <p>Each week combines rigorous intellectual formation with communal Socratic discussion—designed for adults and young adults ready to engage.</p>
                 <div class="section-line"></div>
             </div>
-            <div class="why-grid">
-                <div class="why-card">
-                    <div class="why-icon">◆</div>
-                    <h3>Classical</h3>
-                    <p>A time-tested model that teaches students how to think, following the natural stages of how children learn and grow.</p>
+            <div class="format-grid">
+                <div class="format-card">
+                    <div class="format-icon">◈</div>
+                    <h3>Primary Reading</h3>
+                    <p>Approximately 45 minutes of curated reading from the Church Fathers, Doctors, Councils, and Scholastic masters. Sources provided, context established.</p>
                 </div>
-                <div class="why-card">
-                    <div class="why-icon">✦</div>
-                    <h3>Christian</h3>
-                    <p>Every subject taught through a biblical lens, forming students to see all of life through the framework of truth.</p>
+                <div class="format-card">
+                    <div class="format-icon">◉</div>
+                    <h3>Video Lectures</h3>
+                    <p>15–20 minutes of guided lecture content that frames the reading, highlights key arguments, and prepares you for discussion.</p>
                 </div>
-                <div class="why-card">
-                    <div class="why-icon">◈</div>
-                    <h3>Formational</h3>
-                    <p>Graduates who think clearly, read deeply, and speak persuasively—prepared for whatever comes next in life.</p>
+                <div class="format-card">
+                    <div class="format-icon">◎</div>
+                    <h3>Socratic Discussion</h3>
+                    <p>1 hour of open, guided discussion. Apply the Audit methodology to real-world examples. No question is off-limits—only intellectual dishonesty is challenged.</p>
                 </div>
             </div>
         </div>
@@ -906,9 +1087,9 @@
     <section class="cta-section">
         <div class="container">
             <p class="section-label">Begin the Journey</p>
-            <h2>Find Your Family's Path</h2>
-            <p>Our Family Consultants will meet you where you are and help you discover the next right step. No cost. No pressure. Just wisdom and guidance.</p>
-            <a href="#contact" class="btn-gold">Schedule a Consultation</a>
+            <h2>Join the Unbroken Thread</h2>
+            <p>Registration is now open for the next cohort. Space is limited to ensure meaningful discussion. Reserve your place today.</p>
+            <a href="#contact" class="btn-gold">Register Your Interest</a>
         </div>
     </section>
 
@@ -917,8 +1098,8 @@
         <div class="container">
             <div class="section-header">
                 <p class="section-label">Get In Touch</p>
-                <h2>Begin the Conversation</h2>
-                <p>Have questions about our programs? Want to explore if Lexicon Of Truth is right for your family? We're here to help.</p>
+                <h2>Register Your Interest</h2>
+                <p>Have questions about the course? Want to be notified when the next cohort opens? Fill out the form below and we will respond within 1–2 business days.</p>
                 <div class="section-line"></div>
             </div>
             <div class="contact-container">
@@ -942,38 +1123,36 @@
                         <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567">
                     </div>
                     <div class="form-group">
-                        <label for="interest">Area of Interest</label>
+                        <label for="interest">I Am Interested In</label>
                         <select id="interest" name="interest" required>
                             <option value="">Select an option...</option>
-                            <option value="yteach">You-Teach Curriculum</option>
-                            <option value="selfpaced">Self-Paced Courses</option>
-                            <option value="live">Live Online Classes</option>
-                            <option value="lsa">Lexicon Scholars Academy</option>
-                            <option value="consult">Free Consultation</option>
-                            <option value="other">Other</option>
+                            <option value="upcoming">Upcoming Cohort</option>
+                            <option value="materials">Course Materials Only</option>
+                            <option value="group">Group / Parish Registration</option>
+                            <option value="questions">General Questions</option>
                         </select>
                     </div>
                     <div class="form-group">
                         <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="4" placeholder="Tell us about your student and your goals..."></textarea>
+                        <textarea id="message" name="message" rows="4" placeholder="Tell us about your background, your interest in the course, or any questions you have..."></textarea>
                     </div>
-                    <button type="submit" class="btn-gold btn-full">Send Message</button>
+                    <button type="submit" class="btn-gold btn-full">Submit Registration</button>
                     <p class="form-note">We respect your privacy. Your information will never be shared.</p>
                 </form>
                 <div class="contact-info">
                     <h3>Contact Information</h3>
-                    <p>Reach out directly, or fill out the form and we'll respond within 1-2 business days.</p>
+                    <p>Reach out directly, or fill out the form and we will respond within 1–2 business days.</p>
                     <div class="contact-detail">
                         <div class="contact-detail-label">Email</div>
                         <div class="contact-detail-value">inquiry@lexiconoftruth.com</div>
                     </div>
                     <div class="contact-detail">
-                        <div class="contact-detail-label">Phone</div>
-                        <div class="contact-detail-value">(800) 555-0199</div>
+                        <div class="contact-detail-label">Response Time</div>
+                        <div class="contact-detail-value">1–2 Business Days</div>
                     </div>
                     <div class="contact-detail">
-                        <div class="contact-detail-label">Hours</div>
-                        <div class="contact-detail-value">Monday – Friday, 8am – 5pm EST</div>
+                        <div class="contact-detail-label">Format</div>
+                        <div class="contact-detail-value">Online / Virtual Discussion</div>
                     </div>
                 </div>
             </div>
@@ -985,31 +1164,31 @@
         <div class="footer-grid">
             <div class="footer-brand">
                 <a href="#" class="logo">Lexicon<span>Of Truth</span></a>
-                <p>Classical Christian education for K-12, illuminating minds and transforming hearts through truth, beauty, and goodness.</p>
+                <p>A 10-week course in classical Catholic formation—restoring language, reclaiming truth, and defending the unbroken thread of Christ's Teaching.</p>
             </div>
             <div class="footer-col">
-                <h4>Programs</h4>
+                <h4>The Course</h4>
                 <ul>
-                    <li><a href="#">You-Teach</a></li>
-                    <li><a href="#">Self-Paced</a></li>
-                    <li><a href="#">Live Online</a></li>
-                    <li><a href="#">Scholars Academy</a></li>
+                    <li><a href="#about">Overview</a></li>
+                    <li><a href="#modules">Modules</a></li>
+                    <li><a href="#format">Format</a></li>
+                    <li><a href="#contact">Register</a></li>
                 </ul>
             </div>
             <div class="footer-col">
                 <h4>Resources</h4>
                 <ul>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Classical Education</a></li>
-                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Student Guides</a></li>
+                    <li><a href="#">Reading List</a></li>
+                    <li><a href="#">Lecture Archive</a></li>
                     <li><a href="#">FAQs</a></li>
                 </ul>
             </div>
             <div class="footer-col">
-                <h4>Support</h4>
+                <h4>Connect</h4>
                 <ul>
                     <li><a href="#">Contact</a></li>
-                    <li><a href="#">Consultation</a></li>
+                    <li><a href="#">Newsletter</a></li>
                     <li><a href="#">Privacy Policy</a></li>
                 </ul>
             </div>
