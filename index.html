@@ -138,11 +138,10 @@
             background: var(--midnight);
         }
 
-        .hero-image {
+        .hero-bg {
             position: absolute;
             inset: 0;
-            background: url('hero-image.png') center/cover no-repeat;
-            opacity: 0.6;
+            background: linear-gradient(135deg, var(--midnight) 0%, var(--navy-deep) 50%, var(--midnight-light) 100%);
         }
 
         .hero-overlay {
@@ -954,7 +953,7 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="hero-image"></div>
+        <div class="hero-bg"></div>
         <div class="hero-overlay"></div>
         <div class="hero-glow"></div>
         <div class="hero-content">
